@@ -41,7 +41,7 @@ Description: Ignition Physics classes and functions for robot apps - Development
 Package: libignition-physics3-sdf-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-physics3-core-dev,
+Depends: libignition-physics3-core-dev (= ${binary:Version}),
          libignition-cmake2-dev (>= 2.1.0),
          libsdformat10-dev,
          libignition-physics3 (= ${binary:Version}),
@@ -56,7 +56,7 @@ Description: Ignition Physics classes and functions for robot apps - SDF Dev fil
 Package: libignition-physics3-mesh-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-physics3-core-dev,
+Depends: libignition-physics3-core-dev (= ${binary:Version}),
          libignition-cmake2-dev (>= 2.1.0),
          libignition-common3-graphics-dev,
          libignition-physics3 (= ${binary:Version}),
@@ -83,9 +83,9 @@ Description: Ignition Physics classes and functions for robot apps - Shared libr
 Package: libignition-physics3-dartsim-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-physics3-core-dev,
-         libignition-physics3-sdf-dev,
-         libignition-physics3-mesh-dev,
+Depends: libignition-physics3-core-dev (= ${binary:Version}),
+         libignition-physics3-sdf-dev (= ${binary:Version}),
+         libignition-physics3-mesh-dev (= ${binary:Version}),
          libignition-cmake2-dev (>= 2.1.0),
          libignition-common3-graphics-dev,
          libignition-math6-dev,
@@ -125,9 +125,9 @@ Description: Ignition Physics classes and functions for robot apps - Dartsim lib
 Package: libignition-physics3-tpe-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-physics3-core-dev,
-         libignition-physics3-sdf-dev,
-         libignition-physics3-mesh-dev,
+Depends: libignition-physics3-core-dev (= ${binary:Version}),
+         libignition-physics3-sdf-dev (= ${binary:Version}),
+         libignition-physics3-mesh-dev (= ${binary:Version}),
          libignition-cmake2-dev (>= 2.1.0),
          libignition-math6-dev,
          libignition-math6-eigen3-dev,
@@ -182,16 +182,51 @@ Description: Ignition Physics classes and functions for robot apps - TPE library
   .
   TPE library component shared library
 
+Package: libignition-physics3-bullet-dev
+Architecture: any
+Section: libdevel
+Depends: libignition-physics3-core-dev (= ${binary:Version}),
+         libignition-physics3-sdf-dev (= ${binary:Version}),
+         libignition-physics3-mesh-dev (= ${binary:Version}),
+         libignition-cmake2-dev (>= 2.1.0),
+         libignition-common3-graphics-dev,
+         libignition-math6-dev,
+         libignition-math6-eigen3-dev,
+         libignition-plugin-dev,
+         libbullet-dev,
+         libsdformat10-dev,
+         libignition-physics3-bullet (= ${binary:Version}),
+         ${misc:Depends}
+Multi-Arch: same
+Description: Ignition Physics classes and functions for robot apps - Development files
+  Ignition Physics is a component in the ignition framework, a set of libraries
+  designed to rapidly develop robot applications.
+  .
+  Bullet component, development files
+
+Package: libignition-physics3-bullet
+Architecture: any
+Section: libs
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Multi-Arch: same
+Description: Ignition Physics classes and functions for robot apps - Bullet engine
+  Ignition Physics is a component in the ignition framework, a set of libraries
+  designed to rapidly develop robot applications.
+  .
+  Bullet component shared library
+
 Package: libignition-physics3-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-physics3-core-dev,
-         libignition-physics3-dartsim-dev,
-         libignition-physics3-mesh-dev,
-         libignition-physics3-sdf-dev,
-         libignition-physics3-tpe-dev,
-         libignition-physics3-tpelib-dev,
+Depends: libignition-physics3-core-dev (= ${binary:Version}),
+         libignition-physics3-dartsim-dev (= ${binary:Version}),
+         libignition-physics3-mesh-dev (= ${binary:Version}),
+         libignition-physics3-sdf-dev (= ${binary:Version}),
+         libignition-physics3-tpe-dev (= ${binary:Version}),
+         libignition-physics3-tpelib-dev (= ${binary:Version}),
          ${misc:Depends}
+# Bullet not added on purpose to avoid adding a new dependency to a stable release
 Multi-Arch: same
 Description: Ignition Physics classes and functions for robot apps - Metapackage
   Ignition Physics is a component in the ignition framework, a set of libraries
