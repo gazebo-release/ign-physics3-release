@@ -6,6 +6,7 @@ Priority: optional
 Build-Depends: cmake,
                pkg-config,
                debhelper (>= 9),
+               libbullet-dev,
                libignition-cmake2-dev (>= 2.1.0),
                libignition-common3-graphics-dev,
                libignition-common3-profiler-dev,
