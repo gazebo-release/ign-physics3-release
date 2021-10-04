@@ -1,3 +1,9 @@
+ignition-physics3 (3.3.0-2~buster) buster; urgency=medium
+
+  * ignition-physics3 3.3.0-2 release
+
+ -- Steve Peters <scpeters@openrobotics.org>  Mon, 04 Oct 2021 11:04:05 -0700
+
 ignition-physics3 (3.3.0-1~buster) buster; urgency=medium
 
   * ignition-physics3 3.3.0-1 release
