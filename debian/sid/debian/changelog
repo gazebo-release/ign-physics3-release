@@ -1,3 +1,9 @@
+ignition-physics3 (3.4.0-1~sid) sid; urgency=medium
+
+  * ignition-physics3 3.4.0-1 release
+
+ -- Addisu Z. Taddese <addisu@openrobotics.org>  Thu, 11 Nov 2021 15:10:57 -0600
+
 ignition-physics3 (3.3.0-1~sid) sid; urgency=medium
 
   * ignition-physics3 3.3.0-1 release
